@@ -1,0 +1,278 @@
+// Variables
+$primary-color: rgb(45, 45, 45);
+$secondary-color: #ffffff;
+$background-color: #181818;
+
+// Mixins
+@mixin transition($property, $duration: 0.3s, $timing-function: ease, $delay: 0s) {
+  transition: $property $duration $timing-function $delay;
+}
+
+// Global Styles
+*{
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  color: $secondary-color;
+  background-color: $background-color;
+  margin: 0;
+}
+
+h1{ font-size: 5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 0.75em;}
+
+.container{
+  margin: auto;
+}
+
+.nav-link{
+  color: rgb(193, 193, 193);
+  font-size: 1.5em;
+}
+
+.navbar-nav .nav-link.active {
+  color: rgb(240, 240, 240);
+}
+
+.navbar-nav a:hover{
+  color: rgb(240, 240, 240);
+}
+
+.navbar-nav .nav-link.show{
+  color: rgb(240, 240, 240);
+}
+
+.navbar-brand{
+  min-width: 200px;
+  width:35%;
+}
+
+.dropdown-menu{
+  background-color: rgb(151, 150, 150);
+  color: rgb(240, 240, 240);
+}
+
+header{
+  background-color: $background-color;
+  margin: 0;
+  padding: 0px 0px;
+  font-weight: bold;
+  color: $primary-color;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+header .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav{
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+  padding-bottom: 25px;
+  font-size: small;
+}
+
+header a{
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+#hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+}
+
+#hero h1{
+  color: white;
+}
+
+#hero button{
+  font-size: 1.75em;
+}
+
+#donde-estamos .container{
+  text-align: center;
+  padding: 200px 12px;
+}
+
+#servicios{
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
+
+#servicios .container{
+  padding: 150px 12px;
+}
+
+#servicios h2{
+  margin-top: 0;
+  font-size: 4.0em;
+}
+
+#servicios p{
+  display: none;
+}
+
+#servicios .cuadrados{
+  background-position: center center;
+  background-size: cover;
+  padding: 50px 0px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+
+
+
+#contacto .container{
+  text-align: center;
+  padding: 250px 12px;
+}
+
+#contacto li{
+  margin: 16px 0px;
+  font-weight: bold;
+}
+
+@media (min-width: 10px){
+  header{
+      position: fixed;
+      width: 100%;
+  }
+
+  header .container{
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  header nav{
+      flex-direction: row;
+      padding-bottom: 0;
+      padding-right: 20px;
+  }
+
+  #hero h1{
+      font-size: 5em;
+  }
+
+  #donde-estamos .container{
+      display: flex;
+      justify-content: space-evenly;
+      padding-left: 100px;
+  }
+
+  #donde-estamos .texto{
+      width: 50%;
+      max-width: 600px;
+      text-align: initial;
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  #donde-estamos h2{
+      margin-top: 0px;
+  }
+
+  #donde-estamos .img-container{
+      background-size: cover;
+      background-position: center center;
+      height: 500px;
+      width: 400px; 
+  }
+
+  #servicios .programas{
+      display: flex;
+      justify-content: center;
+  }
+
+  #servicios p{
+      display: block;
+      margin-bottom: 30px;
+  }
+
+  #servicios h2{
+      font-size: 3.5em;
+  }
+
+  #servicios h3{
+      margin-top: 0;
+  }
+
+  #servicios .cuadrados{
+      padding: 50px;
+      background-size: 100% 150px;
+      background-repeat: no-repeat;
+      background-position-y: 0;
+      background-color: $primary-color;
+      box-shadow: 2px 2px 10px $primary-color;
+  }
+
+  
+
+  #contacto{
+      background-repeat: no-repeat;
+      background-size: 500px 400px;
+      background-position: calc(100vw - 500px) 120px;
+  }
+
+  #contacto .container{
+      text-align: initial;
+  }
+
+  #contacto ul{
+      margin-left: 100px;
+  }
+
+  .genero{
+    padding-left: 10px;
+  }
+
+  footer {
+    font-size: 1em;
+    padding-left: 100px;
+    background-color: $primary-color;  
+  }
+
+  footer label{
+    padding-left: 20px;
+  }
+
+  #faq-items{
+    text-align: left;
+  }
+
+  #faq-items label{
+    font-size:1em;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  #contacto{
+      background-position-x: calc(100vw - 700px);
+  }
+}
