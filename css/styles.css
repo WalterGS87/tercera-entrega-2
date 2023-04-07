@@ -9,7 +9,7 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   color: #ffffff;
-  background-color: #181818;
+  background: linear-gradient(rgb(0, 0, 0), rgb(68, 50, 67));
   margin: 0;
 }
 
@@ -255,5 +255,7 @@ header a {
     background-position-x: calc(100vw - 700px);
   }
 }
+
+
 
 /*# sourceMappingURL=styles.css.map */

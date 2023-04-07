@@ -255,6 +255,7 @@ header a{
     font-size: 1em;
     padding-left: 100px;
     background-color: $primary-color;  
+    text-align: center;
   }
 
   footer label{
@@ -262,7 +263,7 @@ header a{
   }
 
   #faq-items{
-    text-align: left;
+    text-align: center;
   }
 
   #faq-items label{
@@ -270,6 +271,8 @@ header a{
   }
 
 }
+
+$gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0));
 
 @media (min-width: 1200px) {
   #contacto{
